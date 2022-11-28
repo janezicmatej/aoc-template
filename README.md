@@ -16,6 +16,21 @@ cargo prepare <day>
 # 🎄 Type `cargo solve 01` to run your solution.
 ```
 
+### Download input
+prepare `.env` file
+```
+cp .env.example .env
+```
+set `YEAR` to whichever year you are solving for and `TOKEN` to AoC session Cookie.
+
+```sh
+# example: `cargo download 1`
+cargo download <day>
+
+# output:
+# Downloaded input file "src/inputs/01.txt"
+```
+
 ### Solve
 ```sh
 # example: `cargo solve 01`

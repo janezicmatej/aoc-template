@@ -54,6 +54,11 @@ fn parse_time(val: &str, postfix: &str) -> f64 {
     val.split(postfix).next().unwrap().parse().unwrap()
 }
 
+pub fn parse_args() -> Result<u8, pico_args::Error> {
+    let mut args = pico_args::Arguments::from_env();
+    args.free_from_str()
+}
+
 pub fn parse_exec_time(output: &str) -> f64 {
     output.lines().fold(0_f64, |acc, l| {
         if !l.contains("elapsed:") {
