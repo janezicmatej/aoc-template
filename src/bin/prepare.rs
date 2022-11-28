@@ -35,11 +35,6 @@ mod tests {
 }
 "###;
 
-fn parse_args() -> Result<u8, pico_args::Error> {
-    let mut args = pico_args::Arguments::from_env();
-    args.free_from_str()
-}
-
 fn safe_create_file(path: &str) -> Result<File, std::io::Error> {
     OpenOptions::new().write(true).create_new(true).open(path)
 }
@@ -49,7 +44,7 @@ fn create_file(path: &str) -> Result<File, std::io::Error> {
 }
 
 fn main() {
-    let day = match parse_args() {
+    let day = match aoc::parse_args() {
         Ok(day) => day,
         Err(_) => {
             eprintln!("Need to specify a day (as integer). example: `cargo prepare 7`");
