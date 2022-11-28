@@ -11,8 +11,8 @@ target/
 .env
 
 # downloaded inputs
-src/inputs/
-!src/inputs/keep
+/src/inputs/*
+!/src/inputs/.keep
 
-src/test_inputs/
-!src/test_inputs/keep
+/src/test_inputs/*
+!/src/test_inputs/.keep
