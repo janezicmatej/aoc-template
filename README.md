@@ -1,5 +1,5 @@
 # Advent-of-Code {YEAR}
-*This is a dumbed down version of [fspoettel/advent-of-code-rust](https://github.com/fspoettel/advent-of-code-rust/blob/main/Cargo.toml) with some extra features*
+*This is a dumbed down version of [fspoettel/advent-of-code-rust](https://github.com/fspoettel/advent-of-code-rust) with some extra features*
 
 ## CLI
 ### Prepare
