@@ -1,3 +1,6 @@
+![Check](https://github.com/janezicmatej/aoc-template/actions/workflows/check.yml/badge.svg)
+![Tests](https://github.com/janezicmatej/aoc-template/actions/workflows/tests.yml/badge.svg)
+![Clippy](https://github.com/janezicmatej/aoc-template/actions/workflows/clippy.yml/badge.svg)
 # Advent-of-Code {YEAR}
 *This is a dumbed down version of [fspoettel/advent-of-code-rust](https://github.com/fspoettel/advent-of-code-rust) with some extra features*
 
