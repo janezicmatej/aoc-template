@@ -47,7 +47,7 @@ fn main() {
     let day = match aoc::parse_args() {
         Ok(day) => day,
         Err(_) => {
-            eprintln!("Need to specify a day (as integer). example: `cargo prepare 7`");
+            eprintln!("Need to specify a day (as integer). example: `cargo scaffold 7`");
             process::exit(1);
         }
     };
