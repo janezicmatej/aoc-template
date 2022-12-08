@@ -17,7 +17,7 @@
 - `.env.example`: example dotenv file
 
 ### Cli
-- `cargo prepare <day>`: prepare solution files for `day`
+- `cargo scaffold <day>`: prepare solution files for `day`
 - `cargo download <day>`: download input file for `day`
 - `cargo solve <day>`: run solution against input for `day`
 - `cargo all`: alias for run; runs solutions for all days

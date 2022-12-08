@@ -1,5 +1,5 @@
 [alias]
-prepare = "run --bin prepare --"
-download = "run --bin download --"
+scaffold = "run --bin scaffold --quiet --release --"
+download = "run --bin download --quiet --release --"
 
 solve = "run --bin"
