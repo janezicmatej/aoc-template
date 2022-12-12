@@ -28,9 +28,7 @@ fn main() {
 
     let client = Client::builder().default_headers(headers).build().unwrap();
     let res = client
-        .get(format!(
-            "https://adventofcode.com/{year}/day/{day}/input"
-        ))
+        .get(format!("https://adventofcode.com/{year}/day/{day}/input"))
         .send()
         .unwrap()
         .text()
