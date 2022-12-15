@@ -24,7 +24,7 @@ dependencies = [
 
 [[package]]
 name = "aoc"
-version = "20.0.0"
+version = "21.0.0"
 dependencies = [
  "dotenv",
  "hashbrown 0.13.1",

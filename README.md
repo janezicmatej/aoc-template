@@ -11,7 +11,7 @@
         - `*.rs`: convenience scripts
     - `inputs/`: this directory is gitignored, input files go here
     - `examples/`: example files go here; you can push this as test are run in ci
-    - `helpers.rs`: helper functions you can reuse in solution files go here
+    - `utils/`: utils files go here
     - `lib.rs`: contains framework code
     - `main.rs`: contains framework code
 - `.env.example`: example dotenv file
