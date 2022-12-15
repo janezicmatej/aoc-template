@@ -24,12 +24,12 @@ mod tests {
     use super::*;
     #[test]
     fn test_part_one() {
-        let input = aoc::read_file("test_inputs", DAY);
+        let input = aoc::read_file("examples", DAY).trim();
         assert_eq!(part_one(&input), None);
     }
     #[test]
     fn test_part_two() {
-        let input = aoc::read_file("test_inputs", DAY);
+        let input = aoc::read_file("examples", DAY).trim();
         assert_eq!(part_two(&input), None);
     }
 }
@@ -55,7 +55,7 @@ fn main() {
     let day_padded = format!("{day:02}");
 
     let input_path = format!("src/inputs/{day_padded}.txt");
-    let example_path = format!("src/test_inputs/{day_padded}.txt");
+    let example_path = format!("src/examples/{day_padded}.txt");
     let module_path = format!("src/bin/{day_padded}.rs");
 
     let mut file = match safe_create_file(&module_path) {
