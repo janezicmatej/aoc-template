@@ -1,6 +1,6 @@
 [package]
 name = "aoc"
-version = "21.0.0"
+version = "23.0.0"
 edition = "2021"
 authors = ["Matej Janežič <janezic.mj@gmail.com>"]
 default-run = "aoc"
@@ -10,7 +10,7 @@ default-run = "aoc"
 [dependencies]
 # framework
 dotenv = "0.15.0"
-elves = "0.1.0"
+elves = "0.2.0"
 hashbrown = "0.13.1"
 hex-literal = "0.3.4"
 itertools = "0.10.5"
