@@ -1,5 +1,6 @@
 [alias]
 scaffold = "run --bin scaffold --quiet --release --"
 download = "run --bin download --quiet --release --"
+download_all = "run --bin download_all --quiet --release --"
 
 solve = "run --bin"
