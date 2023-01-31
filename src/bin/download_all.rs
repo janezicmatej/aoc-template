@@ -1,4 +1,4 @@
-use dotenv::dotenv;
+use dotenvy::dotenv;
 use itertools::Itertools;
 use reqwest::{header, Client};
 use std::{env, fs::OpenOptions, io::Write, process};
