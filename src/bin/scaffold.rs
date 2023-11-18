@@ -8,7 +8,7 @@ use std::{
     process,
 };
 
-const MODULE_TEMPLATE: &str = r###"pub fn part_one(input: &str) -> Option<u32> {
+const MODULE_TEMPLATE: &str = r#"pub fn part_one(input: &str) -> Option<u32> {
     None
 }
 pub fn part_two(input: &str) -> Option<u32> {
@@ -33,7 +33,7 @@ mod tests {
         assert_eq!(part_two(&input), None);
     }
 }
-"###;
+"#;
 
 fn safe_create_file(path: &str) -> Result<File, std::io::Error> {
     OpenOptions::new().write(true).create_new(true).open(path)

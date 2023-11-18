@@ -1,9 +1,9 @@
 use dotenvy::dotenv;
-use reqwest::{header, Client};
+use reqwest::blocking::Client;
+use reqwest::header;
 use std::{env, fs::OpenOptions, io::Write, process};
 
-#[tokio::main]
-async fn main() {
+fn main() {
     let day: u8 = match aoc::parse_args() {
         Ok(day) => day,
         Err(_) => {
@@ -30,10 +30,8 @@ async fn main() {
     let res = client
         .get(format!("https://adventofcode.com/{year}/day/{day}/input"))
         .send()
-        .await
         .unwrap()
         .text()
-        .await
         .unwrap();
 
     let input_path = format!("src/inputs/{day_padded}.txt");
