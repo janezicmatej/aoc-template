@@ -45,11 +45,10 @@ pub fn read_file(folder: &str, day: u8) -> String {
     let filepath = cwd.join("src").join(folder).join(format!("{day:02}.txt"));
 
     let f = fs::read_to_string(filepath);
-    f.expect("could not open input file")
+    f.expect("could not open input file").trim().to_string()
 }
 
 pub fn parse_args() -> Result<u8, pico_args::Error> {
     let mut args = pico_args::Arguments::from_env();
     args.free_from_str()
 }
-
