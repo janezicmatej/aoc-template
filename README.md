@@ -13,14 +13,12 @@
     - `examples/`: example files go here; you can push this as test are run in ci
     - `utils/`: utils files go here
     - `lib.rs`: contains framework code
-    - `main.rs`: contains framework code
 - `.env.example`: example dotenv file
 
 ### Cli
 - `cargo scaffold <day>`: prepare solution files for `day`
 - `cargo download <day>`: download input file for `day`
 - `cargo solve <day>`: run solution against input for `day`
-- `cargo all`: alias for run; runs solutions for all days
 
 
 ### dotenv
