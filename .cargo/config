@@ -1,4 +1,4 @@
 [alias]
-scaffold = "run -p scaffold --release --"
-download = "run -p download --release --"
+scaffold = "run -p scaffold --release --quiet --"
+download = "run -p download --release --quiet --"
 solve = "run --bin --release"

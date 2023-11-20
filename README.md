@@ -20,6 +20,8 @@
 - `cargo download <day>`: download input file for `day`
 - `cargo solve <day>`: run solution against input for `day`
 
+*Run `cargo build --all` once so scaffold and download packages get compiled, otherwise they will have to be compiled on first run.*
+
 ### dotenv
 
 set `YEAR` to whichever year you are solving for and `TOKEN` to AoC session Cookie
