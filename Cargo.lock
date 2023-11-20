@@ -45,7 +45,7 @@ checksum = "0942ffc6dcaadf03badf6e6a2d0228460359d5e34b57ccdc720b7382dfbd5ec5"
 
 [[package]]
 name = "aoc"
-version = "31.0.0"
+version = "32.0.0"
 dependencies = [
  "elves",
  "hashbrown 0.14.2",
@@ -133,7 +133,7 @@ checksum = "03d8c417d7a8cb362e0c37e5d815f5eb7c37f79ff93707329d5a194e42e54ca0"
 
 [[package]]
 name = "download"
-version = "31.0.0"
+version = "32.0.0"
 dependencies = [
  "dotenvy",
  "pico-args",
@@ -739,7 +739,7 @@ checksum = "7b4b9743ed687d4b4bcedf9ff5eaa7398495ae14e61cba0a295704edbc7decde"
 
 [[package]]
 name = "scaffold"
-version = "31.0.0"
+version = "32.0.0"
 dependencies = [
  "dotenvy",
  "pico-args",
