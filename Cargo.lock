@@ -45,17 +45,11 @@ checksum = "0942ffc6dcaadf03badf6e6a2d0228460359d5e34b57ccdc720b7382dfbd5ec5"
 
 [[package]]
 name = "aoc"
-version = "29.0.0"
+version = "30.0.0"
 dependencies = [
- "dotenvy",
  "elves",
  "hashbrown 0.14.2",
- "hex-literal",
  "itertools 0.12.0",
- "lazy_static",
- "pico-args",
- "regex",
- "reqwest",
 ]
 
 [[package]]
@@ -136,6 +130,15 @@ name = "dotenvy"
 version = "0.15.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "03d8c417d7a8cb362e0c37e5d815f5eb7c37f79ff93707329d5a194e42e54ca0"
+
+[[package]]
+name = "download"
+version = "30.0.0"
+dependencies = [
+ "dotenvy",
+ "pico-args",
+ "reqwest",
+]
 
 [[package]]
 name = "either"
@@ -308,12 +311,6 @@ checksum = "ee512640fe35acbfb4bb779db6f0d80704c2cacfa2e39b601ef3e3f47d1ae4c7"
 dependencies = [
  "libc",
 ]
-
-[[package]]
-name = "hex-literal"
-version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6fe2267d4ed49bc07b63801559be28c718ea06c4738b7a03c94df7386d2cde46"
 
 [[package]]
 name = "http"
@@ -739,6 +736,15 @@ name = "ryu"
 version = "1.0.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7b4b9743ed687d4b4bcedf9ff5eaa7398495ae14e61cba0a295704edbc7decde"
+
+[[package]]
+name = "scaffold"
+version = "30.0.0"
+dependencies = [
+ "dotenvy",
+ "pico-args",
+ "reqwest",
+]
 
 [[package]]
 name = "schannel"

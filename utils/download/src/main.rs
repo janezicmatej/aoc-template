@@ -3,8 +3,13 @@ use reqwest::blocking::Client;
 use reqwest::header;
 use std::{env, fs::OpenOptions, io::Write, process};
 
+pub fn parse_args() -> Result<u8, pico_args::Error> {
+    let mut args = pico_args::Arguments::from_env();
+    args.free_from_str()
+}
+
 fn main() {
-    let day: u8 = match aoc::parse_args() {
+    let day: u8 = match parse_args() {
         Ok(day) => day,
         Err(_) => {
             eprintln!("Need to specify a day (as integer). example: `cargo download 7`");

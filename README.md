@@ -8,18 +8,17 @@
 - `src/` :
     - `bin/`:
         - `<day>.rs`: solution files 
-        - `*.rs`: convenience scripts
     - `inputs/`: this directory is gitignored, input files go here
     - `examples/`: example files go here; you can push this as test are run in ci
     - `utils/`: utils files go here
     - `lib.rs`: contains framework code
 - `.env.example`: example dotenv file
+- `utils/`: binary packages with convenience scripts structured using cargo workspaces
 
 ### Cli
 - `cargo scaffold <day>`: prepare solution files for `day`
 - `cargo download <day>`: download input file for `day`
 - `cargo solve <day>`: run solution against input for `day`
-
 
 ### dotenv
 
