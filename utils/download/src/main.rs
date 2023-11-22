@@ -39,7 +39,7 @@ fn main() {
         .text()
         .unwrap();
 
-    let input_path = format!("src/inputs/{day_padded}.txt");
+    let input_path = format!("data/inputs/{day_padded}.txt");
     let mut file = match OpenOptions::new()
         .write(true)
         .create(true)

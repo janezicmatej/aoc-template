@@ -19,7 +19,7 @@ members = ["utils/download", "utils/scaffold"]
 [workspace.package]
 description = "template for advent of code"
 readme = "README.md"
-version = "38.0.0"
+version = "39.0.0"
 edition = "2021"
 license = "MIT"
 authors = ["Matej Janežič <janezic.mj@gmail.com>"]
