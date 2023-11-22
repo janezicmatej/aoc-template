@@ -11,8 +11,8 @@ pub const ANSI_BOLD: &str = "\x1b[1m";
 pub const ANSI_RESET: &str = "\x1b[0m";
 
 #[macro_export]
-macro_rules! solve {
-    ($part:expr, $solver:ident, $input:expr) => {{
+macro_rules! solution {
+    ($day:expr) => {
         use aoc::{ANSI_BOLD, ANSI_ITALIC, ANSI_RESET};
         use std::fmt::Display;
         use std::time::Instant;
@@ -34,16 +34,20 @@ macro_rules! solve {
             }
         }
 
-        println!("🎄 {}Part {}{} 🎄", ANSI_BOLD, $part, ANSI_RESET);
-        print_result($solver, $input);
-    }};
+        fn main() {
+            let input = aoc::read_file("inputs", 1);
+            println!("🎄 {}Part {}{} 🎄", ANSI_BOLD, 1, ANSI_RESET);
+            print_result(part_one, &input);
+            println!("🎄 {}Part {}{} 🎄", ANSI_BOLD, 1, ANSI_RESET);
+            print_result(part_two, &input);
+        }
+    };
 }
 
+#[must_use]
 pub fn read_file(folder: &str, day: u8) -> String {
     let cwd = env::current_dir().unwrap();
-
-    let filepath = cwd.join("src").join(folder).join(format!("{day:02}.txt"));
-
+    let filepath = cwd.join("data").join(folder).join(format!("{day:02}.txt"));
     let f = fs::read_to_string(filepath);
     f.expect("could not open input file").trim().to_string()
 }

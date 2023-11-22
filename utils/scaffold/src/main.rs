@@ -11,26 +11,23 @@ use std::{
 const MODULE_TEMPLATE: &str = r#"pub fn part_one(input: &str) -> Option<u32> {
     None
 }
+
 pub fn part_two(input: &str) -> Option<u32> {
     None
 }
-fn main() {
-    let input = &aoc::read_file("inputs", DAY);
-    aoc::solve!(1, part_one, input);
-    aoc::solve!(2, part_two, input);
-}
+
+aoc::solution!(DAY);
+
 #[cfg(test)]
 mod tests {
     use super::*;
     #[test]
     fn test_part_one() {
-        let input = aoc::read_file("examples", DAY);
-        assert_eq!(part_one(&input), None);
+        assert_eq!(part_one(&aoc::read_file("examples", DAY)), None);
     }
     #[test]
     fn test_part_two() {
-        let input = aoc::read_file("examples", DAY);
-        assert_eq!(part_two(&input), None);
+        assert_eq!(part_two(&aoc::read_file("examples", DAY)), None);
     }
 }
 "#;
@@ -59,8 +56,8 @@ fn main() {
 
     let day_padded = format!("{day:02}");
 
-    let input_path = format!("src/inputs/{day_padded}.txt");
-    let example_path = format!("src/examples/{day_padded}.txt");
+    let input_path = format!("data/inputs/{day_padded}.txt");
+    let example_path = format!("data/examples/{day_padded}.txt");
     let module_path = format!("src/bin/{day_padded}.rs");
 
     let mut file = match safe_create_file(&module_path) {
