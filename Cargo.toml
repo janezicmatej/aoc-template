@@ -11,10 +11,6 @@ repository.workspace = true
 [dependencies]
 # many cool stuff for iterators
 itertools = "0.12.0"
-# faster hashing algorithms for hashmaps and hashsets
-hashbrown = "0.14.2"
-# my library with some sorters and parses
-elves = "0.2.0"
 
 [workspace]
 
@@ -23,7 +19,7 @@ members = ["utils/download", "utils/scaffold"]
 [workspace.package]
 description = "template for advent of code"
 readme = "README.md"
-version = "35.0.0"
+version = "36.0.0"
 edition = "2021"
 license = "MIT"
 authors = ["Matej Janežič <janezic.mj@gmail.com>"]
