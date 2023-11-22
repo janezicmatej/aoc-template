@@ -36,9 +36,9 @@ macro_rules! solution {
 
         fn main() {
             let input = aoc::read_file("inputs", 1);
-            println!("🎄 {}Part {}{} 🎄", ANSI_BOLD, 1, ANSI_RESET);
+            println!("{}Part {}{}", ANSI_BOLD, 1, ANSI_RESET);
             print_result(part_one, &input);
-            println!("🎄 {}Part {}{} 🎄", ANSI_BOLD, 1, ANSI_RESET);
+            println!("{}Part {}{}", ANSI_BOLD, 1, ANSI_RESET);
             print_result(part_two, &input);
         }
     };
