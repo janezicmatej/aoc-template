@@ -23,11 +23,11 @@ mod tests {
     use super::*;
     #[test]
     fn test_part_one() {
-        assert_eq!(part_one(&aoc::read_file("examples", DAY)), None);
+        assert_eq!(part_one(&aoc::template::read_file("examples", DAY)), None);
     }
     #[test]
     fn test_part_two() {
-        assert_eq!(part_two(&aoc::read_file("examples", DAY)), None);
+        assert_eq!(part_two(&aoc::template::read_file("examples", DAY)), None);
     }
 }
 "#;
