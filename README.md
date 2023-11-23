@@ -5,15 +5,16 @@
 ## Project overview
 
 ### Project structure
+- `data/` :
+    - `examples/`: example files go here; you can push this as test are run in ci
+    - `inputs/`: this directory is gitignored, input files go here
 - `src/` :
     - `bin/`:
         - `<day>.rs`: solution files 
-    - `inputs/`: this directory is gitignored, input files go here
-    - `examples/`: example files go here; you can push this as test are run in ci
     - `utils/`: utils files go here
     - `lib.rs`: contains framework code
-- `.env.example`: example dotenv file
 - `utils/`: binary packages with convenience scripts structured using cargo workspaces
+- `.env.example`: example dotenv file
 
 ### Cli
 - `cargo scaffold <day>`: prepare solution files for `day`
