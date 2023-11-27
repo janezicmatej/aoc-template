@@ -10,36 +10,39 @@ pub const ANSI_ITALIC: &str = "\x1b[3m";
 pub const ANSI_BOLD: &str = "\x1b[1m";
 pub const ANSI_RESET: &str = "\x1b[0m";
 
+use std::fmt::Display;
+use std::time::Duration;
+use std::time::Instant;
+
+fn time_solution<T>(func: impl FnOnce(&str) -> Option<T>, input: &str) -> Option<(T, Duration)> {
+    let timer = Instant::now();
+    let result = func(input);
+    let elapsed = timer.elapsed();
+
+    result.map(|result| (result, elapsed))
+}
+
+pub fn print_result<T: Display>(func: impl FnOnce(&str) -> Option<T>, input: &str, part: u8) {
+    match time_solution(func, input) {
+        Some((result, elapsed)) => {
+            println!(
+                "{}Part {}{}: {} {}(elapsed: {:.2?}){}",
+                ANSI_BOLD, part, ANSI_RESET, result, ANSI_ITALIC, elapsed, ANSI_RESET
+            );
+        }
+        None => {
+            println!("{}Part {}{}: not solved.", ANSI_BOLD, part, ANSI_RESET)
+        }
+    }
+}
+
 #[macro_export]
 macro_rules! solution {
     ($day:expr) => {
-        use aoc::template::{ANSI_BOLD, ANSI_ITALIC, ANSI_RESET};
-        use std::fmt::Display;
-        use std::time::Instant;
-
-        fn print_result<T: Display>(func: impl FnOnce(&str) -> Option<T>, input: &str) {
-            let timer = Instant::now();
-            let result = func(input);
-            let elapsed = timer.elapsed();
-            match result {
-                Some(result) => {
-                    println!(
-                        "{} {}(elapsed: {:.2?}){}",
-                        result, ANSI_ITALIC, elapsed, ANSI_RESET
-                    );
-                }
-                None => {
-                    println!("not solved.")
-                }
-            }
-        }
-
         fn main() {
-            let input = aoc::template::read_file("inputs", 1);
-            print!("{}Part {}{}: ", ANSI_BOLD, 1, ANSI_RESET);
-            print_result(part_one, &input);
-            print!("{}Part {}{}: ", ANSI_BOLD, 2, ANSI_RESET);
-            print_result(part_two, &input);
+            let input = aoc::template::read_file("inputs", $day);
+            aoc::template::print_result(part_one, &input, 1);
+            aoc::template::print_result(part_two, &input, 2);
         }
     };
 }
