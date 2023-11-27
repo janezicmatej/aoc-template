@@ -1,3 +1,15 @@
+[workspace.package]
+description = "template for advent of code"
+readme = "README.md"
+version = "45.0.0"
+edition = "2021"
+license = "MIT"
+authors = ["Matej Janežič <janezic.mj@gmail.com>"]
+repository = "https://github.com/janezicmatej/aoc-template.git"
+
+[workspace]
+members = ["utils/download", "utils/scaffold"]
+
 [package]
 name = "aoc"
 description.workspace = true
@@ -9,19 +21,4 @@ authors.workspace = true
 repository.workspace = true
 
 [dependencies]
-# many cool stuff for iterators
-itertools = "0.12.0"
-
-[workspace]
-
-members = ["utils/download", "utils/scaffold"]
-
-[workspace.package]
-description = "template for advent of code"
-readme = "README.md"
-version = "44.0.0"
-edition = "2021"
-license = "MIT"
-authors = ["Matej Janežič <janezic.mj@gmail.com>"]
-repository = "https://github.com/janezicmatej/aoc-template.git"
 
