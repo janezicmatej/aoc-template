@@ -1,7 +1,7 @@
 [workspace.package]
 description = "template for advent of code"
 readme = "README.md"
-version = "45.0.0"
+version = "46.0.0"
 edition = "2021"
 license = "MIT"
 authors = ["Matej Janežič <janezic.mj@gmail.com>"]
