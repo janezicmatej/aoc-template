@@ -11,8 +11,8 @@
 - `src/` :
     - `bin/`:
         - `<day>.rs`: solution files 
-    - `utils/`: utils files go here
-    - `lib.rs`: contains framework code
+    - `lib.rs`: library entrypoint, reusable code goes here
+    - `template.rs`: contains template code
 - `utils/`: binary packages with convenience scripts structured using cargo workspaces
 - `.env.example`: example dotenv file
 
